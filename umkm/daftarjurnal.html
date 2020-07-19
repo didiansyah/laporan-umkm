@@ -151,7 +151,7 @@
               </div>
             </form>
             <a href="editdaftarjurnal.html" class="d-none d-sm-inline-block mr-2 btn btn-sm btn-primary shadow-sm"><i class="fas fa-edit fa-sm text-white-50"></i>Edit</a>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i>Hapus</a>
+            <!-- <a href="#" data-toggle="modal" data-target="#hapusModal" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i>Hapus</a> -->
           </div>
 
           <!-- DataTales Example -->
@@ -170,6 +170,7 @@
                       <th>Deksripsi</th>
                       <th>Tanggal</th>
                       <th>Keterangan</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -180,6 +181,7 @@
                       <td>Clear</td>
                       <td>20/05/2020</td>
                       <td><a href="editjurnal.html">Diubah</a></td>
+                      <td><a href="#" data-toggle="modal" data-target="#hapusModal" >Hapus</a></td>
                     </tr>
                     <tr>
                       <td>Pemasukan</td>
@@ -188,6 +190,7 @@
                       <td>Clear</td>
                       <td>22/05/2020</td>
                       <td></td>
+                      <td><a href="#" data-toggle="modal" data-target="#hapusModal" >Hapus</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -226,6 +229,25 @@
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="../../login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hapus Modal-->
+  <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Hapus Jurnal</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Yakin ingin menghapus jurnal?</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
+          <a class="btn btn-primary" href="daftarjurnal.html">Ya</a>
         </div>
       </div>
     </div>
