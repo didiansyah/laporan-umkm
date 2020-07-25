@@ -49,7 +49,7 @@
     </li>
      
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="dash_admin.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -61,7 +61,7 @@
           <i class="fas fa-fw fa-file"></i>
           <span>Pengelolaan Nama Akun</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="entryjurnal.html">
           <i class="fas fa-fw fa-book"></i>
           <span>Pengelolaan Entry Jurnal</span></a>
@@ -113,7 +113,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="profile.html">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -135,91 +135,70 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 center">Miko</h1>
+             <h1 class="h3 mb-0 text-gray-800">Miko</h1>
+           </div>
+ 
+          <h6 class="h6 mb-0 text-gray-700 center">Tanggal Jurnal</h6>
+          <div class="input-group">
+             <input type="date" class="form-control">
           </div>
-
-          <!-- Content Row -->
-          <div class="row">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transaksi</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="namaakun.html">Pengelolaan Nama Akun</a></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-file fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transaksi</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="entryjurnal.html">Pengelolaan Jurnal</a></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-book fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transaksi</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="daftarjurnal.html">Pengelolaan Daftar Jurnal</a></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-box fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transaksi</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="labarugi.html">Pengelolaan Lap. Laba Rugi</a></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-chart-line fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transaksi</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="posisikeuangan.html"> Pengelolaan Lap. Posisi Keuangan</a></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-money-bill fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Jenis Transaksi</h6>
+          <select id="transaksi" name="transaksi">
+             <option>Pengeluaran</option>
+             <option>Hutang</option>
+             <option>Bayar Hutang</option>
+             <option>Piutang</option>
+             <option>Dibayar Piutang</option>
+             <option>Tambah Modal</option>
+             <option>Tarik Modal</option>
+             <option>Pengalihan Aset</option>
+             <option>Penyesuaian</option>
+          </select>
+          <br>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Diterima Dari</h6>
+          <select id="transaksi" name="transaksi">
+             <option>3200 - Hibah/Dari pihak lain</option>
+             <option>4010 - Penjualan produk</option>
+             <option>4020 - Pendapatan jasa</option>
+             <option>4040 - Pendapatan lain-lain</option>
+             <option>4050 - Pendapatan bunga bank</option>
+          </select>
+          <br>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Simpan ke</h6>
+          <select id="transaksi" name="transaksi">
+             <option>1010 - Kas</option>
+             <option>1020 - Bank Mandiri</option>
+             <option>1021 - Bank BRI</option>
+             <option>1022 - Bank BNI</option>
+             <option>1023 - Bank BCA</option>
+             <option>1024 - Bank Daerah/Lainnya</option>
+             <option>1040 - Persediaan barang dagangan</option>
+             <option>1050 - Persediaan bahan baku</option>
+             <option>1060 - Beban dibayar dimuka</option>
+             <option>1070 - Perlengkapan/ATK</option>
+          </select>
+          <br>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Nominal</h6>
+          <div class="input-group">
+             <input type="number" class="form-control" placeholder="Rp. 000">
           </div>
-
-      </div>
-      <!-- End of Main Content -->
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Keterangan</h6>
+          <div class="input-group">
+             <input type="text" class="form-control">
+          </div>
+          <br>
+          <button onclick="document.location='entryjurnal.html'" class="btn btn-success" type="submit">Simpan</button>
+ 
+         </div>
+           
+ 
+       </div>
+       <!-- End of Main Content -->
 
     </div>
     <!-- End of Content Wrapper -->
