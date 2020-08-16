@@ -10,7 +10,7 @@
   <meta name="author" content="">
   <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-  <title>Nama UMKM - Dashboard</title>
+  <title>UMKM - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -18,9 +18,6 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this page -->
-  <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -70,12 +67,12 @@
           <i class="fas fa-fw fa-book"></i>
           <span>Entry Jurnal</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="daftarjurnal.html">
           <i class="fas fa-fw fa-box"></i>
           <span>Daftar Jurnal</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="jurnalkoreksi.html">
           <i class="fas fa-fw fa-book-reader"></i>
           <span>Jurnal Koreksi</span></a>
@@ -144,70 +141,75 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Miko</h1>
-            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-              <div class="input-group">
-                <input type="text" class="form-control bg-light border-0 small" placeholder="Cari nama akun..." aria-label="Search" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-            <!-- <a href="editdaftarjurnal.html" class="d-none d-sm-inline-block mr-2 btn btn-sm btn-primary shadow-sm"><i class="fas fa-edit fa-sm text-white-50"></i>Edit</a> -->
-            <!-- <a href="#" data-toggle="modal" data-target="#hapusModal" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i>Hapus</a> -->
+             <h1 class="h3 mb-0 text-gray-800">Miko</h1>
+           </div>
+
+          <h6 class="h6 mb-0 text-gray-700 center">Nama Akun</h6>
+          <div class="input-group">
+             <input type="number" class="form-control">
           </div>
-
-          <!-- DataTales Example -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Jurnal</h6>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Kategori</th>
-                      <th>Keterangan Akun</th>
-                      <th>Nominal</th>
-                      <th>Deksripsi</th>
-                      <th>Tanggal</th>
-                      <th>Keterangan</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Pengeluaran</td>
-                      <td>Diambil dari BANK MANDIRI untuk PERLENGKAPAN/ATK</td>
-                      <td>47.000.560</td>
-                      <td>Clear</td>
-                      <td>20/05/2020</td>
-                      <td><a href="editjurnal.html">Diubah</a></td>
-                      <td><a href="#" data-toggle="modal" data-target="#hapusModal" >Hapus</a></td>
-                    </tr>
-                    <tr>
-                      <td>Pemasukan</td>
-                      <td>Diambil dari BANK BCA untuk Persediaan Barang Dagangan</td>
-                      <td>42.000.560</td>
-                      <td>Clear</td>
-                      <td>22/05/2020</td>
-                      <td></td>
-                      <td><a href="#" data-toggle="modal" data-target="#hapusModal" >Hapus</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Tanggal Jurnal</h6>
+          <div class="input-group">
+             <input type="date" class="form-control">
           </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-    </div>
-    <!-- End of Main Content -->
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Jenis Transaksi</h6>
+          <select id="transaksi" name="transaksi">
+             <option>Pengeluaran</option>
+             <option>Hutang</option>
+             <option>Bayar Hutang</option>
+             <option>Piutang</option>
+             <option>Dibayar Piutang</option>
+             <option>Tambah Modal</option>
+             <option>Tarik Modal</option>
+             <option>Pengalihan Aset</option>
+             <option>Penyesuaian</option>
+          </select>
+          <br>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Diterima Dari</h6>
+          <select id="transaksi" name="transaksi">
+             <option>3200 - Hibah/Dari pihak lain</option>
+             <option>4010 - Penjualan produk</option>
+             <option>4020 - Pendapatan jasa</option>
+             <option>4040 - Pendapatan lain-lain</option>
+             <option>4050 - Pendapatan bunga bank</option>
+          </select>
+          <br>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Simpan ke</h6>
+          <select id="transaksi" name="transaksi">
+             <option>1010 - Kas</option>
+             <option>1020 - Bank Mandiri</option>
+             <option>1021 - Bank BRI</option>
+             <option>1022 - Bank BNI</option>
+             <option>1023 - Bank BCA</option>
+             <option>1024 - Bank Daerah/Lainnya</option>
+             <option>1040 - Persediaan barang dagangan</option>
+             <option>1050 - Persediaan bahan baku</option>
+             <option>1060 - Beban dibayar dimuka</option>
+             <option>1070 - Perlengkapan/ATK</option>
+          </select>
+          <br>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Nominal</h6>
+          <div class="input-group">
+             <input type="number" class="form-control" placeholder="Rp. 0,-">
+          </div>
+          <br>
+          <h6 class="h6 mb-0 text-gray-700 center">Keterangan</h6>
+          <div class="input-group">
+             <input type="text" class="form-control">
+          </div>
+          <br>
+          <button class="btn btn-success" type="submit">Simpan</button>
+ 
+         </div>
+           
+ 
+       </div>
+       <!-- End of Main Content -->
 
     </div>
     <!-- End of Content Wrapper -->
@@ -233,26 +235,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="../../login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hapus Modal-->
-  <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Hapus Jurnal</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Yakin ingin menghapus jurnal?</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-          <a class="btn btn-primary" href="daftarjurnal.html">Ya</a>
+          <a class="btn btn-primary" href="../login.html">Logout</a>
         </div>
       </div>
     </div>
@@ -266,16 +249,10 @@
   <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin-2.min.js"></script>
+  <script src="../vendor/js/sb-admin-2.min.js"></script>
+  
 
-   <!-- Page level plugins -->
-   <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-   <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
- 
-   <!-- Page level custom scripts -->
-   <script src="../vendor/js/demo/datatables-demo.js"></script>
 
 </body>
 
 </html>
-
